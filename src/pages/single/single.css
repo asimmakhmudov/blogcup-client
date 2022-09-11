@@ -1,0 +1,13 @@
+.single {
+    display: flex;
+}
+
+.mobileSidebar {
+    flex: 1;
+}
+
+@media only screen and (max-width: 480px) {
+    .mobileSidebar {
+        display: none;
+    }
+}
