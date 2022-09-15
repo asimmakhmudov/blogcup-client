@@ -1,0 +1,6 @@
+[[redirects]]
+  from = "https://limonblog.netlify.app/"
+  to = "https://limonblogapi.herokuapp.com/"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
