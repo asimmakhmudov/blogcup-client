@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "https://limonblog.netlify.app/"
+  from = "/search"
   to = "https://limonblogapi.herokuapp.com/"
   status = 200
   force = true
