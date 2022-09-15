@@ -1,12 +1,7 @@
 [[redirects]]
-  from = "/"
+  from = "/search"
   to = "https://limonblogapi.herokuapp.com/"
   status = 200
-  force = true
+  force = true # COMMENT: ensure that we always redirect
   headers = {X-From = "Netlify"}
-
-[[headers]]
-  # Define which paths this specific [[headers]] block will cover.
-  for = "/*"
-    [headers.values]
-    Access-Control-Allow-Origin = "*"
+  signed = "API_SIGNATURE_TOKEN"
