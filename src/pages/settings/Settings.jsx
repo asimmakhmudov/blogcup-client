@@ -11,11 +11,11 @@ export const Settings = () => {
   const [email, setEmail] = useState(user.email);
   const [password, setPassword] = useState(user.password);
   const [success, setSuccess] = useState(false);
-  const PF = "https://limonblogapi.herokuapp.com/images/";
+  const PF = "https://limonblog.herokuapp.com/images/";
 
   const deleteUser = async () => {
     try {
-      await axiosInstance.delete(`/users/${user._id}`);
+      await axiosInstance.delete(`api/users/${user._id}`);
       dispatch({ type: "LOGOUT" });
       window.location.replace("/");
     } catch (err) {
@@ -45,7 +45,7 @@ export const Settings = () => {
         } catch (err) {}
       }
       try {
-        const res = await axiosInstance.put("/users/" + user._id, updatedUser);
+        const res = await axiosInstance.put("api/users/" + user._id, updatedUser);
         setSuccess(true);
         dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
       } catch (err) {

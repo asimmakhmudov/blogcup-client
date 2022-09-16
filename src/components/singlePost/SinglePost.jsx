@@ -9,7 +9,7 @@ export const SinglePost = () => {
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState();
   const { user } = useContext(Context);
-  const PF = "https://limonblogapi.herokuapp.com/images/";
+  const PF = "https://limonblog.herokuapp.com/images/";
   const headers = { token: `Bearer ${user?.accessToken}` };
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
@@ -17,7 +17,7 @@ export const SinglePost = () => {
 
   useEffect(() => {
     const getPost = async () => {
-      const res = await axiosInstance.get("/posts/" + path);
+      const res = await axiosInstance.get("api/posts/" + path);
       setPost(res.data);
       setTitle(res.data.title);
       setDesc(res.data.desc);
@@ -27,7 +27,7 @@ export const SinglePost = () => {
 
   const handleDelete = async () => {
     try {
-      await axiosInstance.delete("/posts/" + path, { headers });
+      await axiosInstance.delete("api/posts/" + path, { headers });
       window.location.replace("/");
     } catch (err) {
       console.log(err);
@@ -37,7 +37,7 @@ export const SinglePost = () => {
   const handleUpdate = async () => {
     try {
       await axiosInstance.put(
-        "/posts/" + path,
+        "api/posts/" + path,
         {
           username: user.username,
           title,

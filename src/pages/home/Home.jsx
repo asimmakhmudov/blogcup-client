@@ -12,7 +12,7 @@ export const Home = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axiosInstance.get("/posts" + search)
+      const res = await axiosInstance.get("api/posts" + search)
       setPosts(res.data)
     }
     fetchPosts()

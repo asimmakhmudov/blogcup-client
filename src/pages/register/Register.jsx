@@ -13,7 +13,7 @@ export const Register = () => {
     e.preventDefault();
     setError(false) 
     try {
-      const res = await axiosInstance.post("/auth/register", {
+      const res = await axiosInstance.post("api/auth/register", {
         username,
         email,
         password,
