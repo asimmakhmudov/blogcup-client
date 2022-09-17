@@ -32,7 +32,7 @@ export const Write = () => {
         }
         try {
           const res = await axiosInstance.post("api/posts", newPost, {headers});
-          window.location.replace("api/post/" + res.data._id);
+          window.location.replace("/post/" + res.data._id);
         } catch (err) {
           console.log(err);
         }
