@@ -25,6 +25,16 @@ export default function TopBar() {
               HOME
             </Link>
           </li>
+          {/* <li className="topListItem">
+            <Link to="/" className="link">
+              ABOUT
+            </Link>
+          </li>
+          <li className="topListItem">
+            <Link to="/" className="link">
+              CONTACT
+            </Link>
+          </li> */}
           {user?.isAdmin && (
             <li className="topListItem">
               <Link to="/write" className="link">
@@ -42,7 +52,7 @@ export default function TopBar() {
           <Link to="/settings">
             <img
               className="topImg"
-              src={user?.profilePic ? PF+user.profilePic : "https://www.kindpng.com/imgv/ibwTwxx_login-icon-png-transparent-png/"}
+              src={user.profilePic ? PF+user.profilePic : "https://www.kollywoodupdate.com/files/news/1617851797_dummy-man.png"}
               alt="profile"
             />
           </Link>

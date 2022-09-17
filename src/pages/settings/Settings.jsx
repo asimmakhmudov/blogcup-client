@@ -41,7 +41,7 @@ export const Settings = () => {
         data.append("file", file);
         updatedUser.profilePic = filename;
         try {
-          await axios.put("https://limonblog.herokuapp.com/api/upload", data);
+          await axios.post("https://limonblog.herokuapp.com/api/upload/", data);
           setSuccess(true);
         } catch (err) {}
       }

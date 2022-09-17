@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Context } from "../../context/Context";
 import "./write.css";
 import { axiosInstance } from "../../config";
+import axios from "axios";
 
 export const Write = () => {
   const [title, setTitle] = useState("");
@@ -27,7 +28,7 @@ export const Write = () => {
           data.append("file", file);
           newPost.photo = filename;
           try {
-            await axiosInstance.post("/upload", data, {headers});
+            await axios.post("https://limonblogapi.herokuapp.com/upload/", data, {headers});
           } catch (err) {}
         }
         try {
