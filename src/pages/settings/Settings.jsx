@@ -3,6 +3,7 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import { Context } from "../../context/Context";
 import { useContext, useState } from "react";
 import { axiosInstance } from "../../config";
+import axios from "axios";
 
 export const Settings = () => {
   const { user, dispatch } = useContext(Context);
@@ -40,7 +41,7 @@ export const Settings = () => {
         data.append("file", file);
         updatedUser.profilePic = filename;
         try {
-          await axiosInstance.post("/api/upload", data);
+          await axios.put("https://limonblog.herokuapp.com/api/upload", data);
           setSuccess(true);
         } catch (err) {}
       }
@@ -67,7 +68,7 @@ export const Settings = () => {
           <label>Profile Picture</label>
           <div className="settingsPP">
             <img
-              src={file ? (URL.createObjectURL(file) && PF+user.profilePic) : "https://toppng.com/app-icon-set-login-icon-comments-avatar-icon-PNG-free-PNG-Images_126250"}
+              src={file ? URL.createObjectURL(file) : PF+user.profilePic}
               alt="profilepic"
             />
             <label htmlFor="fileInput">
