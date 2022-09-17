@@ -40,7 +40,7 @@ export const Settings = () => {
         data.append("file", file);
         updatedUser.profilePic = filename;
         try {
-          await axiosInstance.post("/upload", data);
+          await axiosInstance.post("/api/upload", data);
           setSuccess(true);
         } catch (err) {}
       }
