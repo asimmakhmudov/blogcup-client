@@ -67,7 +67,7 @@ export const Settings = () => {
           <label>Profile Picture</label>
           <div className="settingsPP">
             <img
-              src={file ? URL.createObjectURL(file) : PF+user.profilePic}
+              src={file ? (URL.createObjectURL(file) && PF+user.profilePic) : "https://toppng.com/app-icon-set-login-icon-comments-avatar-icon-PNG-free-PNG-Images_126250"}
               alt="profilepic"
             />
             <label htmlFor="fileInput">

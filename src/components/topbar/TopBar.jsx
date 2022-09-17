@@ -52,7 +52,7 @@ export default function TopBar() {
           <Link to="/settings">
             <img
               className="topImg"
-              src={user.profilePic ? PF+user.profilePic : "https://www.kollywoodupdate.com/files/news/1617851797_dummy-man.png"}
+              src={user.profilePic ? PF+user.profilePic : "https://toppng.com/app-icon-set-login-icon-comments-avatar-icon-PNG-free-PNG-Images_126250"}
               alt="profile"
             />
           </Link>
