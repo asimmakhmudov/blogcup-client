@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./topbar.css";
@@ -6,19 +6,28 @@ import "./topbar.css";
 export default function TopBar() {
   const { user, dispatch } = useContext(Context);
   const PF = "https://limonblog.herokuapp.com/images/";
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuToggleHandler = () => {
+    setMenuOpen((p) => !p);
+    // classList  toggle ("show")
+    const menu = document.querySelector(".topCenter");
+    menuOpen ? menu.classList.remove("show") : menu.classList.add("show")
+  };
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
   };
+
+
   return (
     <div className="top">
-      <div className="topLeft">
-        <i className="topIcon fa-brands fa-square-facebook"></i>
-        <i className="topIcon fa-brands fa-square-twitter"></i>
-        <i className="topIcon fa-brands fa-square-pinterest"></i>
-        <i className="topIcon fa-brands fa-square-instagram"></i>
-      </div>
-      <div className="topCenter">
+      <div className={`topCenter`}>
+        <div className="topLeft">
+          <i className="topIcon fa-brands fa-square-facebook"></i>
+          <i className="topIcon fa-brands fa-square-twitter"></i>
+          <i className="topIcon fa-brands fa-square-pinterest"></i>
+          <i className="topIcon fa-brands fa-square-instagram"></i>
+        </div>
         <ul className="topList">
           <li className="topListItem">
             <Link to="/" className="link">
@@ -42,7 +51,11 @@ export default function TopBar() {
           <Link to="/settings">
             <img
               className="topImg"
-              src={user.profilePic ? PF+user.profilePic : "https://www.kollywoodupdate.com/files/news/1617851797_dummy-man.png"}
+              src={
+                user.profilePic
+                  ? PF + user.profilePic
+                  : "https://www.kollywoodupdate.com/files/news/1617851797_dummy-man.png"
+              }
               alt="profile"
             />
           </Link>
@@ -60,7 +73,7 @@ export default function TopBar() {
             </li>
           </ul>
         )}
-        {/* <i className="topSearchIcon fa-solid fa-magnifying-glass"></i> */}
+        {menuOpen ? (<i className="hamMenu fa-sharp fa-solid fa-times" onClick={menuToggleHandler}></i>) : (<i className="hamMenu fa-sharp fa-solid fa-bars" onClick={menuToggleHandler}></i>) }
       </div>
     </div>
   );

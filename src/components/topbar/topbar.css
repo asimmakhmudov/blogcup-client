@@ -1,3 +1,7 @@
+/* * {
+    border: 1px solid red;
+} */
+
 .top {
     width: 100%;
     height: 60px;
@@ -11,7 +15,8 @@
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
 }
 
-.topLeft, .topRight {
+.topLeft,
+.topRight {
     flex: 3;
     display: flex;
     justify-content: center;
@@ -20,6 +25,7 @@
 
 .topCenter {
     flex: 6;
+    display: flex;
 }
 
 .topIcon {
@@ -51,21 +57,80 @@
     cursor: pointer;
 }
 
-.topSearchIcon {
-    font-size: 18px;
-    color: #666;
-    cursor: pointer;
-    margin: 0 30px;
+.hamMenu {
+    display: none;
 }
 
-@media  only screen and (max-width: 480px) {
-    .topLeft, .topCenter, .topRight {
+
+@media only screen and (max-width: 480px) {
+    .top {
+        z-index: 100;
+    }
+    .topLeft,
+    .topCenter,
+    .topRight {
         flex: 1;
     }
-    .topSearchIcon {
-        margin: 0 10px;
+    .topRight {
+        justify-content: space-between;
+        z-index: 100;
     }
+    .hamMenu {
+        display: block;
+        font-size: 24px;
+        color: #666;
+        cursor: pointer;
+        margin-right: 20px;
+        right: 0;
+        z-index: 100;
+    }
+    
+    .topImg {
+        font-size: 20px;
+        margin-left: 20px;
+        color: #444;
+        cursor: pointer;
+    }
+    
+    .topCenter {
+        display: none;
+        position: absolute;
+        height: 50vh;
+        width: 100%;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        background-color: rgba(255, 255, 255, 0.762);
+        /* menu transition */
+        transition: all 400ms ease-in;
+        
+    }
+
+    .show {
+        display: flex;
+        transition: all 400ms ease-in;
+    }
+
+    .topLeft {
+        flex: none;
+        margin-top: 45px;
+    }
+
     .topListItem {
-        margin-right: 10px;
+        text-align: center;
+        margin: 0;
+        margin-top: 45px;
+        height: 100%;
+    }
+
+    .topCenter > .topList {
+        flex-direction: column;
+    }
+
+    .topRight > .topList > li {
+        margin: 0 10px;
+        text-align: center;
+
     }
 }
