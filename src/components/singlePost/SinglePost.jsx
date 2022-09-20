@@ -56,7 +56,7 @@ export const SinglePost = () => {
     <div className="singlePost">
       <div className="singlePostWrapper">
         {post?.photo && (
-          <img className="singlePostImg" src={PF + post?.photo} alt="postimg" />
+          <img className="singlePostImg" src={post.photo && PF+post.photo} alt="postimg" />
         )}
         {updateMode ? (
           <div className="updateMode">

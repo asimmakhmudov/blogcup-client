@@ -25,16 +25,6 @@ export default function TopBar() {
               HOME
             </Link>
           </li>
-          {/* <li className="topListItem">
-            <Link to="/" className="link">
-              ABOUT
-            </Link>
-          </li>
-          <li className="topListItem">
-            <Link to="/" className="link">
-              CONTACT
-            </Link>
-          </li> */}
           {user?.isAdmin && (
             <li className="topListItem">
               <Link to="/write" className="link">
@@ -70,7 +60,7 @@ export default function TopBar() {
             </li>
           </ul>
         )}
-        <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
+        {/* <i className="topSearchIcon fa-solid fa-magnifying-glass"></i> */}
       </div>
     </div>
   );

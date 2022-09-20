@@ -7,7 +7,7 @@ export const Post = ({ post }) => {
     <div className="post">
       {post.photo && (
         <Link to={`/post/${post._id}`} className="link">
-          <img className="postImg" src={PF + post.photo} alt="post" />
+          <img className="postImg" src={PF+post.photo} alt="post" />
         </Link>
       )}
       <div className="postInfo">
