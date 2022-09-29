@@ -11,17 +11,16 @@ export default function TopBar() {
     setMenuOpen((p) => !p);
     // classList  toggle ("show")
     const menu = document.querySelector(".topCenter");
-    menuOpen ? menu.classList.remove("show") : menu.classList.add("show")
+    menuOpen ? menu.classList.remove("show") : menu.classList.add("show");
   };
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
   };
 
-
   return (
     <div className="top">
-      <div className={`topCenter`}>
+      <div className="topCenter">
         <div className="topLeft">
           <i className="topIcon fa-brands fa-square-facebook"></i>
           <i className="topIcon fa-brands fa-square-twitter"></i>
@@ -34,6 +33,11 @@ export default function TopBar() {
               HOME
             </Link>
           </li>
+          <li className="topListItem">
+            <Link to="/" className="link">
+              HOME
+            </Link>
+          </li>
           {user?.isAdmin && (
             <li className="topListItem">
               <Link to="/write" className="link">
@@ -41,24 +45,28 @@ export default function TopBar() {
               </Link>
             </li>
           )}
-          <li className="topListItem" onClick={handleLogout}>
-            {user && "LOGOUT"}
-          </li>
         </ul>
       </div>
       <div className="topRight">
         {user ? (
-          <Link to="/settings">
-            <img
-              className="topImg"
-              src={
-                user.profilePic
-                  ? PF + user.profilePic
-                  : "https://www.kollywoodupdate.com/files/news/1617851797_dummy-man.png"
-              }
-              alt="profile"
-            />
-          </Link>
+            <ul className="topList">
+              <Link to="/settings">
+                <li>
+                  <img
+                    className="topImg"
+                    src={
+                      user.profilePic
+                        ? PF + user.profilePic
+                        : "https://www.kollywoodupdate.com/files/news/1617851797_dummy-man.png"
+                    }
+                    alt="profile"
+                  />
+                </li>
+              </Link>
+              <li className="topListItem" onClick={handleLogout}>
+                {user && "LOGOUT"}
+              </li>
+            </ul>
         ) : (
           <ul className="topList">
             <li className="topListItem">
@@ -73,7 +81,17 @@ export default function TopBar() {
             </li>
           </ul>
         )}
-        {menuOpen ? (<i className="hamMenu fa-sharp fa-solid fa-times" onClick={menuToggleHandler}></i>) : (<i className="hamMenu fa-sharp fa-solid fa-bars" onClick={menuToggleHandler}></i>) }
+        {menuOpen ? (
+          <i
+            className="hamMenu fa-sharp fa-solid fa-times"
+            onClick={menuToggleHandler}
+          ></i>
+        ) : (
+          <i
+            className="hamMenu fa-sharp fa-solid fa-bars"
+            onClick={menuToggleHandler}
+          ></i>
+        )}
       </div>
     </div>
   );

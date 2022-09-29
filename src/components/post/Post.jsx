@@ -19,11 +19,11 @@ export const Post = ({ post }) => {
         <Link to={`/post/${post._id}`} className="link">
           <span className="postTitle">{post.title}</span>
         </Link>
-        <hr />
         <span className="postDate">
           {new Date(post.createdAt).toDateString()}
         </span>
       </div>
+      <hr className="postLine" />
       <Link to={`/post/${post._id}`} className="link">
         <p className="postDesc">{post.desc}</p>
       </Link>

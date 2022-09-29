@@ -12,20 +12,26 @@
     align-items: center;
     font-family: 'Josefin Sans', sans-serif;
     z-index: 100;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid #ccc;
 }
 
 .topLeft,
 .topRight {
-    flex: 3;
+    flex: 2;
     display: flex;
-    justify-content: center;
     align-items: center;
+}
+.topRight {
+    justify-content: end;
+}
+.topLeft {
+    justify-content: start;
 }
 
 .topCenter {
-    flex: 6;
+    flex: 3;
     display: flex;
+    justify-content: end;
 }
 
 .topIcon {
@@ -39,12 +45,14 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    margin-right: 15px;
     object-fit: cover;
 }
 
 .topList {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -104,7 +112,6 @@
         background-color: rgba(255, 255, 255, 0.762);
         /* menu transition */
         transition: all 400ms ease-in;
-        
     }
 
     .show {
@@ -120,7 +127,7 @@
     .topListItem {
         text-align: center;
         margin: 0;
-        margin-top: 45px;
+        margin-top: 25px;
         height: 100%;
     }
 

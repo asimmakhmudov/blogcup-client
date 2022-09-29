@@ -1,11 +1,10 @@
 .post {
-    width: 305px;
-    margin: 0px 22px 40px 22px;
-    border-radius: 5px;
+    width: 340px;
+    margin: 5px;
     padding: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border: 1px solid #ccc;
     height: auto;
-    max-height: 200px;
+    max-height: 250px;
 }
 
 .postImg {
@@ -18,7 +17,13 @@
 .postInfo {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
+    padding: 10px;
+}
+
+.postLine {
+    height: 0.5px;
+    color: solid;
 }
 
 .postCat {
@@ -32,7 +37,7 @@
 }
 
 .postTitle {
-    font-family: "Josefin sans", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 24px;
     font-weight: 700;
     margin-top: 15px;
