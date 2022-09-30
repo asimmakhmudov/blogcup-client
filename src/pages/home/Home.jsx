@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./home.css";
 import { Posts }from "../../components/posts/Posts";
-import Sidebar from "../../components/sidebar/Sidebar"
+// import Sidebar from "../../components/sidebar/Sidebar"
 import { useLocation } from "react-router-dom";
 import { axiosInstance } from "../../config";
 import CarouselComp from "../../components/carousel/Carousel";
