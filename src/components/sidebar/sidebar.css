@@ -1,9 +1,7 @@
 .sidebar {
-    flex: 3;
-    margin: 20px;
+    flex: 1;
     padding-bottom: 30px;
-    background-color: #fdfbfb;
-    border-radius: 10px;
+    background-color: #fbfdfd;
     display: flex;
     flex-direction: column;
     align-items: center;
