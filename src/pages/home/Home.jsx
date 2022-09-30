@@ -4,7 +4,7 @@ import { Posts }from "../../components/posts/Posts";
 import Sidebar from "../../components/sidebar/Sidebar"
 import { useLocation } from "react-router-dom";
 import { axiosInstance } from "../../config";
-import Carousel from "../../components/carousel/Carousel";
+import CarouselComp from "../../components/carousel/Carousel";
 
 export const Home = () => {
   const [posts, setPosts] = useState([]);
@@ -20,10 +20,10 @@ export const Home = () => {
 
   return (
     <>
-      <Carousel/>
+      <CarouselComp/>
       <div className="home">
         <Posts posts={posts}/>
-        <Sidebar/>
+        {/* <Sidebar/> */}
       </div>
     </>
   );
