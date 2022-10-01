@@ -4,17 +4,17 @@ function CarouselComp() {
   const data = [
     {
       image:
-        "https://c4.wallpaperflare.com/wallpaper/297/288/1009/5bd320d590bcf-wallpaper-preview.jpg",
+        "https://angelamooreblog.files.wordpress.com/2013/07/old-life-new-life.jpg",
       caption: ""
     },
     {
       image:
-        "https://c4.wallpaperflare.com/wallpaper/677/667/795/united-arab-emirates-dubai-reflection-on-midnight-4k-ultra-hd-desktop-wallpapers-for-computers-laptop-tablet-and-mobile-phones-3840%C3%972400-wallpaper-preview.jpg",
+        "https://www.breathehr.com/hubfs/productivity.webp",
       caption: ""
     },
     {
       image:
-        "https://c4.wallpaperflare.com/wallpaper/974/932/861/dubai-united-arab-emirates-city-and-architecture-marina-night-reflection-ultra-hd-wallpaper-for-desktop-mobile-phones-and-laptops-3840%C3%972400-wallpaper-preview.jpg",
+        "https://englishwithjeff.com/wp-content/uploads/2016/08/stress.jpg",
       caption: ""
     }
   ];
@@ -34,7 +34,7 @@ function CarouselComp() {
         data={data}
         time={3000}
         width="100%"
-        height="80vh"
+        height="70vh"
         captionStyle={captionStyle}
         slideNumber={true}
         slideNumberStyle={slideNumberStyle}
@@ -42,15 +42,18 @@ function CarouselComp() {
         automatic={true}
         dots={true}
         pauseIconColor="white"
+        radius="10px"
         pauseIconSize="40px"
         slideBackgroundColor="darkgrey"
-        slideImageFit="cover"
+        slideImageFit="fill"
         thumbnails={false}
         thumbnailWidth="100px"
         style={{
           textAlign: "center",
-          maxWidth: "100%",
-          maxHeight: "80vh"
+          maxWidth: "95%",
+          maxHeight: "100%",
+          objectFit: "cover",
+          margin: "80px auto 10px auto"
         }}
       />
     </div>

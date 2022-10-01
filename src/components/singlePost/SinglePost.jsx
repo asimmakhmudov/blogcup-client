@@ -70,21 +70,23 @@ export const SinglePost = () => {
             <button className="updateButton" onClick={handleUpdate}>Update</button>
           </div>
         ) : (
-          <h1 className="singlePostTitle">
-            {post?.title}
+          <div className="singlePostTitleBox">
             {user?.isAdmin && (
               <div className="singlePostEdit">
                 <i
                   className="singlePostIcon fa-solid fa-pen-to-square"
                   onClick={() => setUpdateMode(true)}
-                ></i>
+                  ></i>
                 <i
                   className="singlePostIcon fa-solid fa-trash-can"
                   onClick={handleDelete}
-                ></i>
+                  ></i>
               </div>
             )}
-          </h1>
+            <h1 className="singlePostTitle">
+              {post?.title}
+            </h1>
+          </div>
         )}
         <div className="singlePostInfo">
           <span className="singlePostAuthor">

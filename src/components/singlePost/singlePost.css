@@ -1,5 +1,7 @@
 .singlePost {
     flex: 9;
+    padding-top: 60px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .singlePostWrapper {
     padding: 20px;
@@ -15,20 +17,31 @@
     object-fit: cover;
 }
 
-.singlePostTitle {
-    text-align: center;
+.singlePostTitleBox {
     margin: 10px;
-    font-size: 28px;
+    font-size: 24px;
+}
+
+.singlePostTitle {
+    margin: 5px;
+    font-size: 20px;
+    font-weight: 600;
     font-family: "Roboto", sans-serif;
 }
 
 .singlePostEdit {
     float: right;
     font-size: 16px;
+    border: 1px solid teal;
+    width: 80px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
 }
 
 .singlePostIcon {
-    margin-left: 10px;
     cursor: pointer;
 }
 
@@ -50,9 +63,11 @@
 }
 
 .singlePostDesc {
-    color: #666;
+    color: #242424;
     font-size: 18px;
+    padding: 10px;
     line-height: 25px;
+    text-align: justify;
 }
 
 .singlePostDesc::first-letter {

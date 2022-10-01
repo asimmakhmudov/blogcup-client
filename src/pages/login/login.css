@@ -1,12 +1,12 @@
 .login {
-    height: calc(100vh - 50px);
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(
-        rgba(255, 255, 255, 0.5), 
-        rgba(255, 255, 255, 0.5)), 
+    background: linear-gradient(rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0.5)),
         url("https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg");
     background-size: cover;
 }
@@ -16,46 +16,60 @@
 }
 
 .loginForm {
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
 }
 
-.loginForm > label {
+.loginForm>label {
     margin: 10px 0;
 }
 
 .loginInput {
-    padding: 10px;
-    background-color: #fff;
-    border: none;
-    font-size: 15px;
-    border-bottom: 1px solid #ccc;
+    padding: 15px;
     outline: none;
+    border: none;
+    font-size: 18px;
+    background-color: transparent;
+    color: teal;
+    border-radius: 4px;
+    border: 1px solid teal;
 }
 
 .loginButton {
     margin-top: 20px;
+    padding: 15px 8px;
+    outline: none;
     border: none;
-    background-color: teal;
+    font-size: 24px;
     cursor: pointer;
-    color: #fff;
-    border-radius: 10px;
-    padding: 10px;
-}
-.loginButton:disabled {
-    cursor: not-allowed;
-    background-color: coral;
+    background-color: transparent;
+    color: teal;
+    border-radius: 4px;
+    border: 1px solid teal;
 }
 
-.loginRegisterButton {
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    border: none;
-    background-color: teal;
-    cursor: pointer;
-    padding: 10px;
-    color: #fff;
-    border-radius: 10px;
+.loginButton:disabled {
+    cursor: not-allowed;
 }
+
+.loginRegister {
+    margin-top: 20px;
+    width: 250px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #242424;
+} 
+
+.loginRegisterButton {
+    margin-left: 5px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    color: teal;
+} 

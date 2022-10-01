@@ -54,7 +54,8 @@ export const Register = () => {
         </button>
         {error && <span style={{color: "red", marginTop: "10px"}}>Something went wrong!</span>}
       </form>
-      <Link className="link" to="/login">
+      <Link className="link registerLogin"  to="/login">
+        If you have already an account, click here to
         <button className="registerLoginButton">Login</button>
       </Link>
     </div>

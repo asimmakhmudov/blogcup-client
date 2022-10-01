@@ -1,4 +1,4 @@
-import TopBar from "./components/topbar/TopBar";
+import Navbar from "./components/navbar/Navbar";
 import { Home } from "./pages/home/Home";
 import { Single } from "./pages/single/Single";
 import { Write } from "./components/write/Write";
@@ -18,7 +18,7 @@ function App() {
   const {user} = useContext(Context);
   return (
     <Router>
-      <TopBar/>
+      <Navbar/>
       <Routes>
         <Route exact path="/" element={<Home/>}/>
         <Route path="/register" element={user ? <Home/> : <Register/>}/>
