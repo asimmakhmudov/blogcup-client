@@ -5,6 +5,7 @@ import { Write } from "./components/write/Write";
 import { Settings } from "./pages/settings/Settings";
 import { Login } from "./pages/login/Login";
 import { Register } from "./pages/register/Register";
+import { Accordions } from "./pages/faq/Accordions";
 import {
   BrowserRouter as Router,
   Routes,
@@ -23,6 +24,7 @@ function App() {
         <Route exact path="/" element={<Home/>}/>
         <Route path="/register" element={user ? <Home/> : <Register/>}/>
         <Route path="/login" element={user ? <Home/> : <Login/>}/>
+        <Route path="/faq" element={ <Accordions/>}/>
         <Route path="/write" element={user?.isAdmin ? <Write/> : <Home/>}/>
         <Route path="/settings" element={user ? <Settings/> : <Register/>}/>
         <Route path="/post/:postId" element={<Single/>}/>

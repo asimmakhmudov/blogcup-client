@@ -63,10 +63,6 @@
     color: #fff;
 }
 
-.nav-links-mobile {
-    display: none;
-}
-
 .menu-icon {
     display: none;
 }
@@ -84,22 +80,22 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 50%;
+        height: 100%;
         position: fixed;
         justify-content: center;
         align-items: center;
-        top: -60%;
-        left: 0;
+        left: -100%;
+        top: 60px;
         right: 0;
         opacity: 1;
         transition: all 400ms ease-in-out;
+        z-index: -1;
     }
 
     .nav-menu.active {
         background: #242222;
-        top: 59px;
+        top: 60px;
         left: 0;
-        right: 0;
         opacity: 1;
         transition: all 400ms ease-in-out;
         z-index: 1;
@@ -125,13 +121,18 @@
     }
 
     .menu-icon {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35px;
+        width: 30px;
         position: absolute;
         top: 0;
         right: 0;
         transform: translate(-100%, 40%);
         font-size: 1.8rem;
         cursor: pointer;
+        transition: all 400ms ease-in-out;
     }
 
     .fa-times {
