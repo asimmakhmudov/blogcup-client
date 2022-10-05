@@ -9,7 +9,7 @@ export const SinglePost = () => {
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState();
   const { user } = useContext(Context);
-  const PF = "https://limonblog.herokuapp.com/images/";
+  const PF = "https://blogcup.herokuapp.com/images/";
   const headers = { token: `Bearer ${user?.accessToken}` };
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");

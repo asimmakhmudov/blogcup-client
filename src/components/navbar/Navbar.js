@@ -11,7 +11,7 @@ function Navbar() {
     const closeMobileMenu = () => setClick(false);
 
     const { user, dispatch } = useContext(Context);
-    const PF = "https://limonblog.herokuapp.com/images/";
+    const PF = "https://blogcup.herokuapp.com/images/";
 
     const handleLogout = () => {
         dispatch({ type: "LOGOUT" });

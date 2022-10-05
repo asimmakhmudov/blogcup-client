@@ -28,7 +28,7 @@ export const Write = () => {
           data.append("file", file);
           newPost.photo = filename;
           try {
-            await axios.post("https://limonblogapi.herokuapp.com/upload/", data, {headers});
+            await axios.post("https://blogcup.herokuapp.com/upload/", data, {headers});
           } catch (err) {}
         }
         try {
