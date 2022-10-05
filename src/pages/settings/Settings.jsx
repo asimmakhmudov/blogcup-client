@@ -68,7 +68,7 @@ export const Settings = () => {
           <label>Profile Picture</label>
           <div className="settingsPP">
             <img
-              src={file ? URL.createObjectURL(file) : PF+user.profilePic}
+              src={file ? URL.createObjectURL(file) : user.profilePic ? PF + user.profilePic : "https://i.pinimg.com/originals/19/46/37/19463736543a1a231b63bbdf8bf5196a.jpg"}
               alt="profilepic"
             />
             <label htmlFor="fileInput">
