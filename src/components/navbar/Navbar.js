@@ -23,27 +23,27 @@ function Navbar() {
                 <div className="navbar-logo">
                     {user && (
                         <li className="nav-item">
-                        <Link
-                            to="/settings"
-                            className="nav-links"
-                            onClick={closeMobileMenu}
-                        >
-                            <li className="nav-item">
-                                <img
-                                    className="topImg"
-                                    src={
-                                        user.profilePic
-                                            ? PF+user.profilePic
-                                            : "https://www.kollywoodupdate.com/files/news/1617851797_dummy-man.png"
-                                    }
-                                    alt="profile"
-                                />
-                            </li>
-                        </Link>
-                    </li>
+                            <Link
+                                to="/settings"
+                                className="nav-links"
+                                onClick={closeMobileMenu}
+                            >
+                                <li className="nav-item">
+                                    <img
+                                        className="topImg"
+                                        src={
+                                            user.profilePic
+                                                ? PF + user.profilePic
+                                                : "https://i.pinimg.com/originals/19/46/37/19463736543a1a231b63bbdf8bf5196a.jpg"
+                                        }
+                                        alt="profile"
+                                    />
+                                </li>
+                            </Link>
+                        </li>
                     )}
                     <Link to="/" className="nav-links">
-                        MyBlog
+                        BLOGCUP
                     </Link>
                 </div>
                 <div className="menu-icon" onClick={handleClick}>
@@ -74,8 +74,16 @@ function Navbar() {
                     )}
                     {user ? (
                         <>
-                            
                             <div className="nav-item" onClick={closeMobileMenu}>
+                                <Link
+                                    to="/settings"
+                                    className="nav-links"
+                                    onClick={closeMobileMenu}
+                                >
+                                    <li className="btn">
+                                        Settings
+                                    </li>
+                                </Link>
                                 <li className="btn" onClick={handleLogout}>
                                     {user && "LOGOUT"}
                                 </li>
