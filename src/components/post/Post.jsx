@@ -2,7 +2,7 @@ import "./post.css";
 import { Link } from "react-router-dom";
 
 export const Post = ({ post }) => {
-  const PF = "https://limonblog.blogcup.com/images/"
+  const PF = "https://blogcup.herokuapp.com/images/"
   return (
     <div className="post">
       {post.photo && (

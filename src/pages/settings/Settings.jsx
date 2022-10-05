@@ -12,7 +12,7 @@ export const Settings = () => {
   const [email, setEmail] = useState(user.email);
   const [password, setPassword] = useState(user.password);
   const [success, setSuccess] = useState(false);
-  const PF = "https://limonblog.blogcup.com/images/";
+  const PF = "https://blogcup.herokuapp.com/images/";
 
   const deleteUser = async () => {
     try {
@@ -41,7 +41,7 @@ export const Settings = () => {
         data.append("file", file);
         updatedUser.profilePic = filename;
         try {
-          await axios.post("https://limonblog.blogcup.com/api/upload/", data);
+          await axios.post("https://blogcup.herokuapp.com/api/upload/", data);
           setSuccess(true);
         } catch (err) {}
       }
