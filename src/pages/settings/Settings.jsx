@@ -61,8 +61,8 @@ export const Settings = () => {
     <div className="settings">
       <div className="settingsWrapper">
         <div className="settingsTitle">
-          <span className="settingsUpdateTitle">Update Your Account</span>
-          <span className="settingsDeleteTitle" onClick={deleteUser}>Delete Your Account</span>
+          <div className="settingsUpdateTitle">Update Your Account</div>
+          <div className="settingsDeleteTitle" onClick={deleteUser}>Delete Your Account</div>
         </div>
         <form className="settingsForm" onSubmit={handleSubmit}>
           <label>Profile Picture</label>

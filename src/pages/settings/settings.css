@@ -1,6 +1,7 @@
 .settings {
     display: flex;
-    font-family: "Roboto", Arial, sans-serif;
+    font-family: Arial, sans-serif;
+    padding: 60px 10px;
 }
 
 .settingsWrapper {
@@ -12,18 +13,26 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    height: 80px;
 }
 
 .settingsUpdateTitle {
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: lightcoral;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid teal;
+    margin: 5px;
 }
 
 .settingsDeleteTitle {
-    color: red;
-    font-size: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    background-color: #ff0000;
+    color: #fff;
     cursor: pointer;
 }
 
@@ -43,44 +52,56 @@
     height: 70px;
     border-radius: 50%;
     object-fit: cover;
+    border: 2px solid teal;
 }
 
 .settingsPPIcon {
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
-    border-radius: 50%;
-    background-color: teal;
-    color: white;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    border-radius: 50%;
+    border: 1px solid teal;
+    color: #242424;
     cursor: pointer;
     margin-left: 10px;
 }
 
 .settingsForm > label {
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .settingsForm > input {
     color: gray;
     margin: 10px 0;
-    height: 30px;
+    height: 40px;
     border: none;
-    border-bottom: 1px solid lightgray;
+    border: 1px solid teal;
+    padding: 10px;
     outline: none;
+    width: 70vw;
+    border-radius: 5px;
 }
 
 .settingsSubmit {
     width: 150px;
     align-items: flex-end;
     border: none;
-    border-radius: 10px;
-    background-color: teal;
-    color: white;
+    border: 2px solid teal;
+    color: #242424;
+    font-weight: bolder;
     margin-top: 20px;
+    border-radius: 5px;
     cursor: pointer;
     padding: 10px;
+    transition: all 0.5s ease;
+}
+
+.settingsSubmit:hover {
+    background-color: teal;
+    color: #fff;
+    transition: all 0.5s ease;
 }
