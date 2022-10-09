@@ -2,14 +2,16 @@ import "./post.css";
 import { Link } from "react-router-dom";
 
 export const Post = ({ post }) => {
-  const PF = "https://blogcup.herokuapp.com/images/"
+  // const PF = "https://blogcup.herokuapp.com/images/"
   return (
     <div className="post">
-      {post.photo && (
-        <Link to={`/post/${post._id}`} className="link">
-          <img className="postImg" src={PF+post.photo} alt="post" />
-        </Link>
-      )}
+      <div className="imageBox">
+        {post.photo && (
+          <Link to={`/post/${post._id}`} className="link">
+            <img className="postImg" src={post?.photo} alt="post" />
+          </Link>
+        )}
+      </div>
       <div className="postInfo">
         <div className="postCats">
           {post?.categories?.map((c) => (

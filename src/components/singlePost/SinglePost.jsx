@@ -9,10 +9,11 @@ export const SinglePost = () => {
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState();
   const { user } = useContext(Context);
-  const PF = "https://blogcup.herokuapp.com/images/";
+  // const PF = "https://blogcup.herokuapp.com/images/";
   const headers = { token: `Bearer ${user?.accessToken}` };
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
+  const [photo, setPhoto] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
 
   useEffect(() => {
@@ -20,6 +21,7 @@ export const SinglePost = () => {
       const res = await axiosInstance.get("api/posts/" + path);
       setPost(res.data);
       setTitle(res.data.title);
+      setPhoto(res.data.photo);
       setDesc(res.data.desc);
     };
     getPost();
@@ -42,6 +44,7 @@ export const SinglePost = () => {
           username: user.username,
           title,
           desc,
+          photo,
         },
         { headers }
       );
@@ -51,12 +54,25 @@ export const SinglePost = () => {
       console.log(err);
     }
   };
-  
+
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
-        {post?.photo && (
-          <img className="singlePostImg" src={post.photo && PF+post.photo} alt="postimg" />
+        {updateMode ? (
+          <input
+            type="text"
+            value={photo}
+            className="singlePostTitleInput"
+            autoFocus
+            placeholder="Image URL"
+            onChange={(e) => setPhoto(e.target.value)}
+          />
+        ) : (
+          <div className="updateMode">
+            {post?.photo && (
+              <img className="singlePostImg" src={post?.photo} alt="postimg"/>
+            )}
+          </div>
         )}
         {updateMode ? (
           <div className="updateMode">
@@ -67,7 +83,9 @@ export const SinglePost = () => {
               autoFocus
               onChange={(e) => setTitle(e.target.value)}
             />
-            <button className="updateButton" onClick={handleUpdate}>Update</button>
+            <button className="updateButton" onClick={handleUpdate}>
+              Update
+            </button>
           </div>
         ) : (
           <div className="singlePostTitleBox">
@@ -76,16 +94,14 @@ export const SinglePost = () => {
                 <i
                   className="singlePostIcon fa-solid fa-pen-to-square"
                   onClick={() => setUpdateMode(true)}
-                  ></i>
+                ></i>
                 <i
                   className="singlePostIcon fa-solid fa-trash-can"
                   onClick={handleDelete}
-                  ></i>
+                ></i>
               </div>
             )}
-            <h1 className="singlePostTitle">
-              {post?.title}
-            </h1>
+            <h1 className="singlePostTitle">{post?.title}</h1>
           </div>
         )}
         <div className="singlePostInfo">
