@@ -1,0 +1,32 @@
+.allusers {
+    padding: 20px 10px;
+}
+
+.allusers h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px;
+    color: teal;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    background-color: #242424;
+    color: #fff;
+}
+
+td,
+th {
+    border: 1px solid teal;
+    text-align: left;
+    padding: 8px;
+}
+
+tbody:nth-child(even) {
+    background-color: #dddddd;
+}

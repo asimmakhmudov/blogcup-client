@@ -1,18 +1,24 @@
 .sidebar {
-    flex: 1;
-    padding-bottom: 30px;
+    margin: 10vh 0;
     background-color: #fbfdfd;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-self: center;
 }
 
 .sidebarItem {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 80%;
 }   
+
+.sidebarImg {
+    width: 35vw;
+    height: 60vh;
+    object-fit: cover;
+}
 
 .sidebarTitle {
     margin: 10px;
@@ -36,6 +42,7 @@
 
 .sidebarItem > p {
     padding: 30px;
+    width: 80%;
 }
 
 .sidebarList {
@@ -60,7 +67,25 @@
 }
 
 .sidebarIcon {
-    font-size: 16px;
+    font-size: 20px;
     margin-left: 10px;
     cursor: pointer;
+}
+.sidebarSocial > a {
+    color: teal;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .sidebarItem {
+        width: 100%;
+    }
+    .sidebarImg {
+        width: 95%;
+        height: 100%;
+    }
+    .sidebarItem > p {
+        padding: 30px;
+        width: 95%;
+    }
 }

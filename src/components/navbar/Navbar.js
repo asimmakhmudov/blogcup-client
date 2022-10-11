@@ -11,7 +11,7 @@ function Navbar() {
     const closeMobileMenu = () => setClick(false);
 
     const { user, dispatch } = useContext(Context);
-    const PF = "https://blogcup.herokuapp.com/images/";
+    // const PF = "https://blogcup.herokuapp.com/images/";
 
     const handleLogout = () => {
         dispatch({ type: "LOGOUT" });
@@ -25,24 +25,20 @@ function Navbar() {
                         <li className="nav-item">
                             <Link
                                 to="/settings"
-                                className="nav-links"
+                                className="links"
                                 onClick={closeMobileMenu}
                             >
                                 <li className="nav-item">
                                     <img
                                         className="topImg"
-                                        src={
-                                            user.profilePic
-                                                ? PF + user.profilePic
-                                                : "https://i.pinimg.com/originals/19/46/37/19463736543a1a231b63bbdf8bf5196a.jpg"
-                                        }
+                                        src={"https://i.pinimg.com/originals/19/46/37/19463736543a1a231b63bbdf8bf5196a.jpg"}
                                         alt="profile"
                                     />
                                 </li>
                             </Link>
                         </li>
                     )}
-                    <Link to="/" className="nav-links">
+                    <Link to="/" className="links">
                         BLOGCUP
                     </Link>
                 </div>
@@ -51,23 +47,23 @@ function Navbar() {
                 </div>
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
                     <li className="nav-item">
-                        <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                        <Link to="/" className="links" onClick={closeMobileMenu}>
                             Home
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                        <Link to="/about" className="links" onClick={closeMobileMenu}>
                             About Us
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/faq" className="nav-links" onClick={closeMobileMenu}>
+                        <Link to="/faq" className="links" onClick={closeMobileMenu}>
                             FAQ
                         </Link>
                     </li>
                     {user?.isAdmin && (
                         <li className="nav-item">
-                            <Link to="/write" className="nav-links" onClick={closeMobileMenu}>
+                            <Link to="/write" className="links" onClick={closeMobileMenu}>
                                 Write
                             </Link>
                         </li>
@@ -77,7 +73,7 @@ function Navbar() {
                             <div className="nav-item" onClick={closeMobileMenu}>
                                 <Link
                                     to="/settings"
-                                    className="nav-links"
+                                    className="links"
                                     onClick={closeMobileMenu}
                                 >
                                     <li className="btn">

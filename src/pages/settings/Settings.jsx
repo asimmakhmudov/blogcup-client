@@ -1,18 +1,18 @@
 import "./settings.css";
-import Sidebar from "../../components/sidebar/Sidebar";
 import { Context } from "../../context/Context";
 import { useContext, useState } from "react";
 import { axiosInstance } from "../../config";
 import axios from "axios";
+// import { AllUsers } from "../../components/allusers/AllUsers";
 
 export const Settings = () => {
   const { user, dispatch } = useContext(Context);
-  const [file, setFile] = useState(null);
+  // const [file, setFile] = useState(null);
   const [username, setUsername] = useState(user.username);
   const [email, setEmail] = useState(user.email);
   const [password, setPassword] = useState(user.password);
   const [success, setSuccess] = useState(false);
-  const PF = "https://blogcup.herokuapp.com/images/";
+  // const PF = "https://blogcup.herokuapp.com/images/";
 
   const deleteUser = async () => {
     try {
@@ -34,19 +34,22 @@ export const Settings = () => {
       password,
     };
     try {
-      if (file) {
-        const data = new FormData();
-        const filename = Date.now() + file.name;
-        data.append("name", filename);
-        data.append("file", file);
-        updatedUser.profilePic = filename;
-        try {
-          await axios.post("https://blogcup.herokuapp.com/api/upload/", data);
-          setSuccess(true);
-        } catch (err) {}
-      }
+      // if (file) {
+        //   const filename = Date.now() + file.name;
+        //   data.append("name", filename);
+        //   data.append("file", file);
+        //   updatedUser.profilePic = filename;
+        // }
+      const data = new FormData();
       try {
-        const res = await axiosInstance.put("api/users/" + user._id, updatedUser);
+        await axios.post("https://blogcup.herokuapp.com/api/upload/", data);
+        setSuccess(true);
+      } catch (err) {}
+      try {
+        const res = await axiosInstance.put(
+          "api/users/" + user._id,
+          updatedUser
+        );
         setSuccess(true);
         dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
       } catch (err) {
@@ -62,10 +65,12 @@ export const Settings = () => {
       <div className="settingsWrapper">
         <div className="settingsTitle">
           <div className="settingsUpdateTitle">Update Your Account</div>
-          <div className="settingsDeleteTitle" onClick={deleteUser}>Delete Your Account</div>
+          <div className="settingsDeleteTitle" onClick={deleteUser}>
+            Delete Your Account
+          </div>
         </div>
         <form className="settingsForm" onSubmit={handleSubmit}>
-          <label>Profile Picture</label>
+          {/* <label>Profile Picture</label>
           <div className="settingsPP">
             <img
               src={file ? URL.createObjectURL(file) : user.profilePic ? PF + user.profilePic : "https://i.pinimg.com/originals/19/46/37/19463736543a1a231b63bbdf8bf5196a.jpg"}
@@ -80,19 +85,26 @@ export const Settings = () => {
             id="fileInput"
             style={{ display: "none" }}
             onChange={(e) => setFile(e.target.files[0])}
-          />
+          /> */}
           <label>Username</label>
           <input
             type="text"
-            placeholder={user.username + " (Enter new username or leave blank to keep current username)"} 
+            placeholder={
+              user.username +
+              " (Enter new username or leave blank to keep current username)"
+            }
             onChange={(e) => setUsername(e.target.value)}
+            value={username}
             // required
           />
           <label>Email</label>
           <input
             type="email"
-            placeholder={user.email + " (Enter new email or leave blank to keep the same)"}
+            placeholder={
+              user.email + " (Enter new email or leave blank to keep the same)"
+            }
             onChange={(e) => setEmail(e.target.value)}
+            value={email}
             // required
           />
           <label>New Password</label>
@@ -113,9 +125,7 @@ export const Settings = () => {
             </span>
           )}
         </form>
-      </div>
-      <div className="mobileSidebar">
-        <Sidebar />
+        {/* <AllUsers /> */}
       </div>
     </div>
   );

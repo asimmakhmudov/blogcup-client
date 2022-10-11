@@ -1,5 +1,6 @@
 .write {
     padding-top: 70px;
+    min-height: 80vh;
 }
 
 .writeImg {
@@ -49,7 +50,7 @@
 .writeText {
     font-size: 20px;
     height: auto;
-    min-height: 20vh;
+    min-height: 40vh;
 }
 
 .writeSubmit {

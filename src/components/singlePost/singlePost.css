@@ -1,24 +1,29 @@
+/* * {
+    border: 1px solid red;
+} */
 .singlePost {
     flex: 9;
-    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10vh 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 .singlePostWrapper {
-    padding: 20px;
-    padding-right: 0;
     display: flex;
     flex-direction: column;
+    width: 70vw;
 }
 
 .singlePostImg {
     width: 100%;
-    height: 340px;
+    height: 65vh;
     border-radius: 5px;
     object-fit: cover;
 }
 
 .singlePostTitleBox {
-    margin: 10px;
+    margin: 5px;
     font-size: 24px;
 }
 
@@ -26,7 +31,6 @@
     margin: 5px;
     font-size: 20px;
     font-weight: 600;
-    font-family: "Roboto", sans-serif;
 }
 
 .singlePostEdit {
@@ -58,40 +62,31 @@
     display: flex;
     justify-content: space-between;
     font-size: 16px;
-    color: #b39656;
-    font-family: "Josefin Sans", sans-serif;
+    color: teal;
 }
 
 .singlePostDesc {
-    color: #242424;
+    color: #000;
     font-size: 18px;
     padding: 10px;
     line-height: 25px;
-    text-align: justify;
-}
-
-.singlePostDesc::first-letter {
-    margin-left: 20px;
-    font-size: 30px;
-    font-weight: 600;
 }
 
 .singlePostTitleInput {
     text-align: center;
     margin: 10px;
     font-size: 28px;
-    font-family: "Roboto", sans-serif;
     outline: none;
     border: none;
+    width: 100%;
     border-bottom: 1px solid #ccc;
 }
 .singlePostDescInput {
-    color: #666;
+    color: #000;
     font-size: 18px;
     line-height: 25px;
     outline: none;
     border: none;
-    font-family: "Lora", sans-serif;
 }
 
 .updateMode {
@@ -103,13 +98,12 @@
 }
 
 .updateButton {
-    position: absolute;
     margin: 10px;
     padding: 10px;
-    border: none;
+    border: 1px solid teal;
     border-radius: 5px;
-    background-color: teal;
-    color: white;
+    color: #242424;
+    background: transparent;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
@@ -120,5 +114,38 @@
     .singlePostWrapper  {
         padding: 20px;
         margin: 0;
+    }
+
+    .singlePostWrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .singlePostImg {
+        width: 100%;
+        height: 30vh;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+
+    .singlePostTitle {
+        margin: 0px;
+        font-size: 15px;
+    }
+
+    .singlePostInfo {
+        font-size: 13px;
+    }
+
+    .singlePostDesc {
+        color: #000;
+        font-size: 15px;
+        padding: 10px;
+        line-height: 25px;
+    }
+
+    .singlePostTitleInput {
+        font-size: 15px;
     }
 }
