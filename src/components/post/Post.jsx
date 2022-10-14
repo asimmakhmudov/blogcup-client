@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 
 export const Post = ({ post }) => {
   // const PF = "https://blogcup.herokuapp.com/images/"
+  
+  const createMarkup = () => {
+    return { __html: post.desc };
+  }
+
   return (
     <div className="post">
       <div className="imageBox">
@@ -26,7 +31,7 @@ export const Post = ({ post }) => {
         </span>
       </div>
       <Link to={`/post/${post._id}`} className="link">
-        <p className="postDesc">{post.desc}</p>
+        <p className="postDesc" dangerouslySetInnerHTML={createMarkup()}></p>
       </Link>
     </div>
   );

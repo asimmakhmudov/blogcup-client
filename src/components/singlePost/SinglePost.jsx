@@ -3,6 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import "./singlePost.css";
 import { Context } from "../../context/Context";
 import { axiosInstance } from "../../config";
+import { CKEditor } from "@ckeditor/ckeditor5-react";
+import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 
 export const SinglePost = () => {
   const location = useLocation();
@@ -54,6 +56,10 @@ export const SinglePost = () => {
       console.log(err);
     }
   };
+
+  const createMarkup = () => {
+    return { __html: post?.desc };
+  }
 
   return (
     <div className="singlePost">
@@ -114,14 +120,32 @@ export const SinglePost = () => {
           {new Date(post?.createdAt).toDateString()}
         </div>
         {updateMode ? (
-          <textarea
-            rows="100"
-            className="singlePostDescInput"
-            value={desc}
-            onChange={(e) => setDesc(e.target.value)}
+          // <textarea
+          //   rows="100"
+          //   className="singlePostDescInput"
+          //   value={desc}
+          //   onChange={(e) => setDesc(e.target.value)}
+          // />
+          <CKEditor
+            editor={ClassicEditor}
+            data={desc}
+            className="writeText"
+            onReady={(editor) => {
+              // console.log("Editor is ready to use!", editor);
+            }}
+            onChange={(e, editor) => {
+              const data = editor.getData();
+              setDesc(data);
+            }}
+            onBlur={(e, editor) => {
+              // console.log("Blur.", editor);
+            }}
+            onFocus={(e, editor) => {
+              // console.log("Focus.", editor);
+            }}
           />
         ) : (
-          <p className="singlePostDesc">{post?.desc}</p>
+          <p className="singlePostDesc" dangerouslySetInnerHTML={createMarkup()}></p>
         )}
       </div>
     </div>

@@ -10,43 +10,22 @@ export const Accordions = () => {
       </div>
       <div className="accordions">
         <Accordion
-          title="What is the course about?"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          title="Kimlər psixoloq ola bilər?"
+          content="▶️ Qarşıdaki insanın travmalarını çözəcək biri olduğu üçün əvvəla öz travmaları ilə üzləşib həll yolu tapan və bunları sağaltmağı bacaran , psixologiya üçün ali təhsilini tamamlamış, etik qaydaları  bilib tətbiq edən , empatiya, ünsiyyət, sosial bacarığı olan insanlar."
         />
         <Accordion
-          title="Who is this course for?"
-          content="
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<p/>
-        <br/>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<p/>
-        "
+          title="Psixologiyanı bilib tətbiq etmək nə üçün lazımdır?"
+          content="▶️ Hər birimizin cisim sağlığı önəmli olduğu kimi, ruh sağlığımızı da qoruyub saxlamamız üçün ."
         />
         <Accordion
-          title="Who will be teaching the course?"
-          content="
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        <p/>
-        <br/>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<p/>
-        <br/>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<p/>
-      "
+          title="Fərqindəlik qazanmaq üçün nə etməliyəm?"
+          content="▶️ Sənin harada olduğunu tapmalısan . <br/><br/>
+                  ▶️ Daim arayış içində olub yeniliklər öyrənərək dünya görüşünü artırmalısan. <br/><br/>
+                  ▶️ Səbəblər deyil nəticələrə yönəlməlisən <br/><br/>
+                  ▶️ Özünə dəyər verməyin səbəblərini tapmalısan. ( Mən dəyərliyəm, çünki ……..) <br/><br/>
+                  ▶️ Yaraların, travmaların , zəif yönlərinlə üzləşməlisən və onların sənə nə öyrətdiyini anlamaq üçün əlindən gələn qədər çaba göstərməlisən <br/><br/>" 
         />
-        <Accordion
-          title="Who we are?"
-          content="
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        <p/>
-        <br/>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<p/>
-        <br/>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<p/>
-        "
-        />
+        
       </div>
     </>
   );

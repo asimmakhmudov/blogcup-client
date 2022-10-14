@@ -20,10 +20,10 @@
 
 .writeFormGroup {
     display: flex;
-    align-items: flex-end;
     position: relative;
     width: auto;
     flex-direction: column;
+    width: 60vw;
 }
 
 .writeIcon {
@@ -40,18 +40,18 @@
 .writeInput {
     font-size: 24px;
     padding: 10px;
-    width: 70vw;
+    width: 100%;
     outline: none;
     border: 1px solid teal;
     margin: 10px 0;
     border-radius: 5px;
 }
 
-.writeText {
+/* .writeText {
     font-size: 20px;
-    height: auto;
+    height: 500px !important;
     min-height: 40vh;
-}
+} */
 
 .writeSubmit {
     margin: 10px;
@@ -73,10 +73,6 @@
     }
 
     .writeFormGroup {
-        margin-left: 12px;
-    }
-
-    .writeInput {
-        width: 80vw;
+        width: 90%;
     }
 }

@@ -11,7 +11,7 @@ export const Footer = () => {
           src="https://i.pinimg.com/originals/19/46/37/19463736543a1a231b63bbdf8bf5196a.jpg"
           alt=""
         />
-        <h2>BLOGCUP</h2>
+        <h2>LETS ANALYZE</h2>
       </div>
       <div className="footerWrapper">
         <ul className="footerLinks">

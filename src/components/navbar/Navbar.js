@@ -21,26 +21,18 @@ function Navbar() {
         <>
             <nav className="navbar">
                 <div className="navbar-logo">
-                    {user && (
-                        <li className="nav-item">
-                            <Link
-                                to="/settings"
-                                className="links"
-                                onClick={closeMobileMenu}
-                            >
-                                <li className="nav-item">
-                                    <img
-                                        className="topImg"
-                                        src={"https://i.pinimg.com/originals/19/46/37/19463736543a1a231b63bbdf8bf5196a.jpg"}
-                                        alt="profile"
-                                    />
-                                </li>
-                            </Link>
-                        </li>
-                    )}
-                    <Link to="/" className="links">
-                        BLOGCUP
-                    </Link>
+                    <div className="nav-item">
+                        <Link to="/" className="links" onClick={closeMobileMenu}>
+                            <li className="nav-item">
+                                <img
+                                    className="topImg"
+                                    src={"https://i.pinimg.com/originals/19/46/37/19463736543a1a231b63bbdf8bf5196a.jpg"}
+                                    alt="profile"
+                                />
+                                LETS ANALYZE
+                            </li>
+                        </Link>
+                    </div>
                 </div>
                 <div className="menu-icon" onClick={handleClick}>
                     <i className={click ? "fas fa-times" : "fas fa-bars"} />
@@ -53,12 +45,17 @@ function Navbar() {
                     </li>
                     <li className="nav-item">
                         <Link to="/about" className="links" onClick={closeMobileMenu}>
-                            About Us
+                            About
                         </Link>
                     </li>
                     <li className="nav-item">
                         <Link to="/faq" className="links" onClick={closeMobileMenu}>
                             FAQ
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/contact" className="links" onClick={closeMobileMenu}>
+                            Contact
                         </Link>
                     </li>
                     {user?.isAdmin && (
