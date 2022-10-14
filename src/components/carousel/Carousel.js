@@ -1,15 +1,17 @@
 import { Carousel } from "react-carousel-minimal";
+import calousel1 from "../../assets/carousel1.png";
+import calousel2 from "../../assets/carousel2.png";
 
 function CarouselComp() {
   const data = [
     {
       image:
-        "https://angelamooreblog.files.wordpress.com/2013/07/old-life-new-life.jpg",
+      calousel1,
       caption: ""
     },
     {
       image:
-        "https://www.breathehr.com/hubfs/productivity.webp",
+        calousel2,
       caption: ""
     },
     {
