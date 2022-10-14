@@ -5,7 +5,7 @@ export const Post = ({ post }) => {
   // const PF = "https://blogcup.herokuapp.com/images/"
   
   const createMarkup = () => {
-    return { __html: post.desc };
+    return { __html: post.desc.slice(0, 110)+"..." };
   }
 
   return (
@@ -24,7 +24,7 @@ export const Post = ({ post }) => {
           ))}
         </div>
         <Link to={`/post/${post._id}`} className="link">
-          <span className="postTitle">{post.title}</span>
+          <span className="postTitle">{post.title.slice(0, 35)+"..."}</span>
         </Link>
         <span className="postDate">
           {new Date(post.createdAt).toDateString()}
