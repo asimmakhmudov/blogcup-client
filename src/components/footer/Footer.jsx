@@ -17,41 +17,41 @@ export const Footer = () => {
         <ul className="footerLinks">
           <li className="footerLi">
             <Link to="/" className="links">
-              Home
+              ▶️ Home
             </Link>
           </li>
           <li className="footerLi">
             <Link to="/faq" className="links">
-              FAQ
+              ▶️ FAQ
             </Link>
           </li>
           <li className="footerLi">
             <Link to="/faq" className="links">
-              Contact
+              ▶️ Contact
             </Link>
           </li>
           <li className="footerLi">
-            <Link to="/" className="links">
-              About Us
+            <Link to="/about" className="links">
+              ▶️ About
             </Link>
           </li>
         </ul>
       </div>
       <div className="footerWrapper">
-        <h3>Follow Us</h3>
+        <h3>Follow Me ⬇️</h3>
         <div className="footerSocial">
-          <a href="/">
+          <a href="https://www.facebook.com/lyamansuleymanli" target="_blank" rel="noreferrer">
             <i className="footerIcon fab fa-facebook-square"></i>
           </a>
-          <a href="/">
+          <a href="https://instagram.com/laman.suleymanli?igshid=NmNmNjAwNzg=" target="_blank" rel="noreferrer">
+            <i className="footerIcon fab fa-instagram-square"></i>
+          </a>
+          {/* <a href="/">
             <i className="footerIcon fab fa-twitter-square"></i>
           </a>
           <a href="/">
             <i className="footerIcon fab fa-pinterest-square"></i>
-          </a>
-          <a href="/">
-            <i className="footerIcon fab fa-instagram-square"></i>
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

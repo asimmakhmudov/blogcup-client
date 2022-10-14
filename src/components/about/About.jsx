@@ -11,25 +11,26 @@ export default function Sidebar() {
         <div className="sidebarItem">
           <span className="sidebarTitle">Laman Suleymanli</span>
           <div className="sidebarSocial">
-            <a href="/">
+            <a href="https://www.facebook.com/lyamansuleymanli" target="_blank" rel="noreferrer">
               <i className="sidebarIcon fab fa-facebook-square"></i>
             </a>
-            <a href="/">
+            <a href="https://instagram.com/laman.suleymanli?igshid=NmNmNjAwNzg=" target="_blank" rel="noreferrer">
+              <i className="sidebarIcon fab fa-instagram-square"></i>
+            </a>
+            {/* <a href="/">
               <i className="sidebarIcon fab fa-twitter-square"></i>
             </a>
             <a href="/">
               <i className="sidebarIcon fab fa-pinterest-square"></i>
-            </a>
-            <a href="/">
-              <i className="sidebarIcon fab fa-instagram-square"></i>
-            </a>
+            </a> */}
           </div>
         </div>
         <div className="sidebarItem">
           <p>
             ▶️ Klinik psixologiya<br/><br/>
             Araşdırılacaq sahələr ⬇️ <br/><br/>
-              ▶️ Psixoanaliz Geştalt psixologiyası <br/>
+              ▶️ Psixoanaliz <br/>
+              ▶️ Geştalt psixologiyası <br/>
               ▶️ CBT (Cognitive Behavioral Therapy) <br/>
               ▶️ Sosial psixologiya <br/>
               ▶️ Döl psixologiyası <br/>
