@@ -1,22 +1,20 @@
 import { Carousel } from "react-carousel-minimal";
 import calousel1 from "../../assets/carousel1.png";
 import calousel2 from "../../assets/carousel2.png";
+import calousel3 from "../../assets/carousel3.png";
 
 function CarouselComp() {
   const data = [
     {
-      image:
-      calousel1,
+      image: calousel1,
       caption: ""
     },
     {
-      image:
-        calousel2,
+      image: calousel2,
       caption: ""
     },
     {
-      image:
-        "https://englishwithjeff.com/wp-content/uploads/2016/08/stress.jpg",
+      image: calousel3,
       caption: ""
     }
   ];
@@ -54,7 +52,6 @@ function CarouselComp() {
           textAlign: "center",
           maxWidth: "95%",
           maxHeight: "100%",
-          objectFit: "cover",
           margin: "80px auto 10px auto"
         }}
       />
