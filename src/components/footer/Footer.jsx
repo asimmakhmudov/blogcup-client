@@ -53,6 +53,11 @@ export const Footer = () => {
             <i className="footerIcon fab fa-pinterest-square"></i>
           </a> */}
         </div>
+        <div>
+          <p>©2022 Lets Analyze. All rights reserved</p>
+          <br />
+          <p>Created by <a style={{color: "#fff"}} href="https://asimmahmudov.tech/" target="_blank" rel="noreferrer">asimmahmudov.tech</a></p>
+        </div>
       </div>
     </div>
   );
