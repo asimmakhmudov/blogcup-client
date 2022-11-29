@@ -34,7 +34,7 @@ function CarouselComp() {
         data={data}
         time={3000}
         width="100%"
-        height="70vh"
+        height="90vh"
         captionStyle={captionStyle}
         slideNumber={true}
         slideNumberStyle={slideNumberStyle}
@@ -42,7 +42,7 @@ function CarouselComp() {
         automatic={true}
         dots={true}
         pauseIconColor="white"
-        radius="10px"
+        // radius="10px"
         pauseIconSize="40px"
         slideBackgroundColor="darkgrey"
         slideImageFit="fill"
@@ -50,9 +50,9 @@ function CarouselComp() {
         thumbnailWidth="100px"
         style={{
           textAlign: "center",
-          maxWidth: "95%",
+          maxWidth: "100%",
           maxHeight: "100%",
-          margin: "80px auto 10px auto"
+          margin: "60px auto 10px auto"
         }}
       />
     </div>
